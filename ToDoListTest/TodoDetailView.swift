@@ -25,9 +25,8 @@ struct TodoDetailView: View {
 }
 
 #Preview {
-    let mockItem = TodoItem(title: "preview Task", isComplete: false)
-    return NavigationStack {
-        TodoDetailView(item: mockItem)
-    }
+    @Previewable @State var mockItem = TodoItem(title: "preview Task", isComplete: false)
     
+        TodoDetailView(item: mockItem)
+
 }

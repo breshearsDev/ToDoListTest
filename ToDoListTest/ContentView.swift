@@ -38,10 +38,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    let mockManager = TodoListManager()
-    
-    return NavigationStack {
+    @Previewable @State var mockManager = TodoListManager()
         ContentView()
-    }
         .environment(mockManager)
 }
